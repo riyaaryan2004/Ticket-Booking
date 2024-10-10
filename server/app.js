@@ -24,6 +24,10 @@ const corsOptions = {
   
 app.use(cookieParser()); 
 
+app.get('', (req, res) => {
+  res.json({ message: 'Backend is running!' });
+});
+
 // Logging Middleware
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
